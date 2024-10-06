@@ -90,6 +90,7 @@ blocks:
     foreground: "#a8a8a8"
     properties:
       style: round
+      threshold: 5000
 
   - type: time
     style: plain
