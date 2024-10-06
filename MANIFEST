@@ -2,7 +2,7 @@
 .emacs.local|symlink|
 .emacs.rc|symlink|
 .config/kitty|symlink|
-.config/starship.toml|symlink|
+.config/rofi|symlink|
 .zshrc|symlink|
 .p10k.omp.yml|symlink|
 .zsh|symlink|

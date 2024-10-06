@@ -1,0 +1,15 @@
+configuration {
+    modi: "drun,run,filebrowser,window,ssh";
+    show-icons: true;
+    display-drun: " ";
+    display-run: " ";
+	display-ssh: "";
+    display-filebrowser: "";
+    display-window: "";
+    drun-display-format: "{name}";
+    window-format: "{w}{t}";
+    font: "JetBrainsMono 15";
+    icon-theme: "Colloid";
+}
+
+@theme "~/.config/rofi/themes/breeze-dracula.
