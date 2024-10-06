@@ -82,6 +82,8 @@ blocks:
     properties:
       fetch_virtual_env: true
       display_mode: environment
+      fallback_names:
+        - "env"
 
   - type: executiontime
     style: plain
@@ -91,6 +93,12 @@ blocks:
     properties:
       style: round
       threshold: 5000
+
+  - type: session
+    style: plain
+    template: "{{ if .SSHSession }} <#8a8a8a></> {{ .UserName }}@{{ .HostName }}{{ end }}"
+    background: parentBackground
+    foreground: "#d7af87"
 
   - type: time
     style: plain
