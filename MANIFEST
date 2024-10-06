@@ -1,0 +1,9 @@
+.emacs|symlink|
+.emacs.local|symlink|
+.emacs.rc|symlink|
+.config/kitty|symlink|
+.config/starship.toml|symlink|
+.zshrc|symlink|
+.p10k.omp.yml|symlink|
+.zsh|symlink|
+.aliases|symlink|

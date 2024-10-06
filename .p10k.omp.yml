@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version: 2
+blocks:
+- type: prompt
+  alignment: left
+  newline: true
+  segments:
+  - type: text
+    style: plain
+    template: ╭─
+    foreground: "#585858"
+
+  - type: os
+    style: plain
+    template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+    background: "#303030"
+    foreground: "#26C6DA"
+
+  - type: text
+    style: plain
+    template: 
+    background: parentBackground
+    foreground: "#8a8a8a"
+
+  - type: path
+    style: plain
+    template: ' {{ if eq .PWD "~" }} {{ else }} {{ end }}{{ .Parent }}'
+    background: parentBackground
+    foreground: "#0087af"
+
+  - type: path
+    style: plain
+    template: "<b>{{ .Path }}</b> "
+    properties:
+      style: folder
+    background: parentBackground
+    foreground: "#00afff"
+
+  - type: git
+    style: plain
+    template: "<#8a8a8a></> {{ if .UpstreamIcon}}{{ .UpstreamIcon }}{{ else }} {{ end }}{{ .HEAD }}{{ if .Working.Changed }} <#00afff>{{ .Working.String }}</>{{ end }} "
+    background: parentBackground
+    foreground: "#5fd700"
+    properties:
+      branch_icon: "<b> </b>"
+      git_icon: " "
+      github_icon: " "
+      gitlab_icon: " "
+      fetch_upstream_icon: true
+      fetch_status: true
+
+  - type: text
+    style: plain
+    template: 
+    background: transparent
+    foreground: parentBackground
+
+- type: prompt
+  alignment: right
+  filler: "<#585858>-</>"
+  segments:
+  - type: text
+    style: plain
+    template: ""
+    background: transparent
+    foreground: parentForeground
+
+  - type: status
+    style: plain
+    template: " {{ if eq .Code 0 }}<#5faf00>✔</>{{ else }}{{.String}} ✘{{ end }}"
+    background: parentForeground
+    foreground: "#d70000"
+    properties:
+      always_enabled: true
+
+  - type: python
+    style: plain
+    template: " <#8a8a8a></> {{ .Venv }} "
+    background: parentBackground
+    foreground: "#00afaf"
+    properties:
+      fetch_virtual_env: true
+      display_mode: environment
+
+  - type: executiontime
+    style: plain
+    template: " <#8a8a8a></> {{ .FormattedMs }} "
+    background: parentBackground
+    foreground: "#a8a8a8"
+    properties:
+      style: round
+
+  - type: time
+    style: plain
+    template: " <#8a8a8a></> {{ .CurrentDate | date .Format }} \uf017 "
+    properties:
+      time_format: "15:04:05"
+    background: parentBackground
+    foreground: "#5f8787"
+
+  - type: text
+    style: plain
+    template: "─╮"
+    background: transparent
+    foreground: "#585858"
+
+- type: prompt
+  alignment: left
+  segments:
+  - type: text
+    style: plain
+    foreground: "#585858"
+    template: "╰─ "
+  newline: true
+- type: rprompt
+  segments:
+  - type: text
+    style: plain
+    foreground: "#585858"
+    template: "─╯"
