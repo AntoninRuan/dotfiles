@@ -73,6 +73,7 @@ blocks:
     foreground: "#d70000"
     properties:
       always_enabled: true
+      status_template: "{{ if eq .Code 130 }}INT{{ else if .eq Code 131}}QUIT{{ else if eq .Code 137 }}KILL{{ end }}"
 
   - type: python
     style: plain
