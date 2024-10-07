@@ -12,4 +12,4 @@ configuration {
     icon-theme: "Colloid";
 }
 
-@theme "~/.config/rofi/themes/breeze-dracula.
+@theme "~/.config/rofi/themes/breeze-dracula.rasi"
