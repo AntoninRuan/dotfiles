@@ -1,0 +1,8 @@
+(defsrc
+    caps)
+
+(defalias
+    capsctrl (tap-hold 200 200 caps lctl))
+
+(deflayer base
+    @capsctrl)
