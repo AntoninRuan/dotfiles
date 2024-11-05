@@ -1,5 +1,5 @@
 configuration {
-    modi: "drun,run,filebrowser,window,ssh";
+    modi: "drun,filebrowser,ssh";
     show-icons: true;
     display-drun: " ";
     display-run: " ";
@@ -10,6 +10,13 @@ configuration {
     window-format: "{w}{t}";
     font: "JetBrainsMono 15";
     icon-theme: "Colloid";
+
+    filebrowser {
+        directory: "~/";
+
+        directories-first: true;
+        show-hidden: false;
+    }
 }
 
 @theme "~/.config/rofi/themes/breeze-dracula.rasi"
