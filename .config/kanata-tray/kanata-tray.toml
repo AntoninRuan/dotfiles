@@ -7,4 +7,5 @@ general.allow_concurrent_presets = false
 [presets."Main config"]
 kanata_config = "~/.config/kanata/config.kbd"
 tcp_port = 5829
+autorun = true
 
