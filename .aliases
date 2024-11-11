@@ -22,3 +22,5 @@ alias rd=rmdir
 alias venv='source env/bin/activate'
 alias which-command=whence
 alias copy="xclip -selection clipboard"
+
+alias kdiff="kitten diff"
