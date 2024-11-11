@@ -1,131 +1,117 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 
-version: 2
 blocks:
 - type: prompt
   alignment: left
-  newline: true
   segments:
-  - type: text
-    style: plain
-    template: ╭─
+  - template: ╭─
     foreground: "#585858"
-
-  - type: os
+    type: text
     style: plain
-    template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
-    background: "#303030"
+  - template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
     foreground: "#26C6DA"
-
-  - type: text
+    background: "#303030"
+    type: os
     style: plain
-    template: 
-    background: parentBackground
+  - template: 
     foreground: "#8a8a8a"
-
-  - type: path
-    style: plain
-    template: ' {{ if eq .PWD "~" }} {{ else }} {{ end }}{{ .Parent }}'
     background: parentBackground
+    type: text
+    style: plain
+  - template: " {{ if eq .PWD \"~\" }}\uf015 {{ else }}\uf07c {{ end }}{{ .Parent }}"
     foreground: "#0087af"
-
-  - type: path
+    background: parentBackground
+    type: path
     style: plain
-    template: "<b>{{ .Path }}</b> "
-    properties:
+  - properties:
       style: folder
-    background: parentBackground
+    template: "<b>{{ .Path }}</b> "
     foreground: "#00afff"
-
-  - type: git
-    style: plain
-    template: "<#8a8a8a></> {{ if .UpstreamIcon}}{{ .UpstreamIcon }}{{ else }} {{ end }}{{ .HEAD }}{{ if .Working.Changed }} <#00afff>{{ .Working.String }}</>{{ end }} "
     background: parentBackground
-    foreground: "#5fd700"
-    properties:
-      branch_icon: "<b> </b>"
-      git_icon: " "
-      github_icon: " "
-      gitlab_icon: " "
-      fetch_upstream_icon: true
-      fetch_status: true
-
-  - type: text
+    type: path
     style: plain
-    template: 
-    background: transparent
+  - properties:
+      branch_icon: <b> </b>
+      fetch_status: true
+      fetch_upstream_icon: true
+      git_icon: "\uf1d3 "
+      github_icon: "\uf09b "
+      gitlab_icon: "\uf296 "
+    template: "<#8a8a8a>\ue0b1</> {{ if .UpstreamIcon}}{{ .UpstreamIcon }}{{ else }}\uf1d3 {{ end }}{{ .HEAD }}{{ if .Working.Changed }} <#00afff>{{ .Working.String }}</>{{ end }} "
+    foreground: "#5fd700"
+    background: parentBackground
+    type: git
+    style: plain
+  - template: 
     foreground: parentBackground
-
+    background: transparent
+    type: text
+    style: plain
+  newline: true
 - type: prompt
   alignment: right
   filler: "<#585858>-</>"
   segments:
-  - type: text
-    style: plain
-    template: ""
-    background: transparent
+  - template: 
     foreground: parentForeground
-
-  - type: status
+    background: transparent
+    type: text
     style: plain
-    template: " {{ if eq .Code 0 }}<#5faf00>✔</>{{ else }}{{.String}} ✘{{ end }}"
-    background: parentForeground
-    foreground: "#d70000"
-    properties:
+  - properties:
       always_enabled: true
       status_template: "{{ if eq .Code 130 }}INT{{ else if .eq Code 131}}QUIT{{ else if eq .Code 137 }}KILL{{ end }}"
-
-  - type: python
+    template: " {{ if eq .Code 0 }}<#5faf00>✔</>{{ else }}{{.String}} ✘{{ end }}"
+    foreground: "#d70000"
+    background: parentForeground
+    type: status
     style: plain
-    template: " <#8a8a8a></> {{ .Venv }} "
-    background: parentBackground
-    foreground: "#00afaf"
-    properties:
-      fetch_virtual_env: true
+  - properties:
       display_mode: environment
-      fallback_names:
-        - "env"
-
-  - type: executiontime
-    style: plain
-    template: " <#8a8a8a></> {{ .FormattedMs }} "
+      default_venv_names:
+      - env
+      fetch_virtual_env: true
+    template: " <#8a8a8a>\ue0b3</> {{ .Venv }} \ue73c"
+    foreground: "#00afaf"
     background: parentBackground
-    foreground: "#a8a8a8"
-    properties:
+    type: python
+    style: plain
+  - properties:
       style: round
       threshold: 5000
-
-  - type: session
-    style: plain
-    template: "{{ if .SSHSession }} <#8a8a8a></> {{ .UserName }}@{{ .HostName }}{{ end }}"
+    template: " <#8a8a8a>\ue0b3</> {{ .FormattedMs }} \uf252"
+    foreground: "#a8a8a8"
     background: parentBackground
+    type: executiontime
+    style: plain
+  - template: "{{ if .SSHSession }} <#8a8a8a>\ue0b3</> {{ .UserName }}@{{ .HostName }}{{ end }}"
     foreground: "#d7af87"
-
-  - type: time
-    style: plain
-    template: " <#8a8a8a></> {{ .CurrentDate | date .Format }} \uf017 "
-    properties:
-      time_format: "15:04:05"
     background: parentBackground
-    foreground: "#5f8787"
-
-  - type: text
+    type: session
     style: plain
-    template: "─╮"
-    background: transparent
+  - properties:
+      time_format: "15:04:05"
+    template: " <#8a8a8a>\ue0b3</> {{ .CurrentDate | date .Format }} \uf017 "
+    foreground: "#5f8787"
+    background: parentBackground
+    type: time
+    style: plain
+  - template: ─╮
     foreground: "#585858"
-
+    background: transparent
+    type: text
+    style: plain
 - type: prompt
   alignment: left
   segments:
-  - type: text
-    style: plain
+  - template: "╰─ "
     foreground: "#585858"
-    template: "╰─ "
+    type: text
+    style: plain
   newline: true
 - type: rprompt
   segments:
-  - type: text
-    style: plain
+  - template: ─╯
     foreground: "#585858"
-    template: "─╯"
+    type: text
+    style: plain
+version: 3
