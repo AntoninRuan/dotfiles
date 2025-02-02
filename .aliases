@@ -24,3 +24,6 @@ alias which-command=whence
 alias copy="xclip -selection clipboard"
 
 alias kdiff="kitten diff"
+alias kssh="kitten ssh"
+alias gf2="/usr/bin/gf2 &> /dev/null &"
+alias qemu-monitor="telnet 127.0.0.1 7777"
