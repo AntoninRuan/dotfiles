@@ -19,9 +19,10 @@ alias ls='ls --color=tty'
 alias lsa='ls -lah'
 alias md='mkdir -p'
 alias rd=rmdir
-alias venv='source env/bin/activate'
+alias venv='source .env/bin/activate'
 alias which-command=whence
 alias copy="xclip -selection clipboard"
+alias mkcdir='f() { md $1; cd $1 }; f'
 
 alias kdiff="kitten diff"
 alias kssh="kitten ssh"

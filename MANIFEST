@@ -5,7 +5,6 @@
 .config/rofi|symlink|
 .config/kanata|symlink|
 .config/kanata-tray|symlink|
-.config/systemd|symlink|
 .zshrc|symlink|
 .p10k.omp.yml|symlink|
 .zsh|symlink|

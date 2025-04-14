@@ -69,6 +69,7 @@ blocks:
       display_mode: environment
       default_venv_names:
       - env
+      - .env
       fetch_virtual_env: true
     template: " <#8a8a8a>\ue0b3</> {{ .Venv }} \ue73c"
     foreground: "#00afaf"
