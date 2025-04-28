@@ -8,7 +8,7 @@ blocks:
     foreground: "#585858"
     type: text
     style: plain
-  - template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+  - template: " {{ if .WSL }}WSL at {{ end }}\uF303 "
     foreground: "#26C6DA"
     background: "#303030"
     type: os

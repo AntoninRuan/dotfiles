@@ -123,6 +123,9 @@
 (require 'fasm-mode)
 (add-to-list 'auto-mode-alist '("\\.asm\\'" . fasm-mode))
 
+(require 'llvm-mode)
+(add-to-list 'auto-mode-alist '("\\.ll\\'" . llvm-mode))
+
 (require 'simpc-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 
@@ -337,6 +340,9 @@
 
 (add-hook 'asm-mode-hook #'my-asm-mode-hook)
 
+;;; Clang format
+(rc/require 'clang-format)
+
 ;;; Lsp-mode
 (rc/require 'lsp-mode
             'lsp-treemacs
@@ -354,6 +360,10 @@
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'python-mode 'lsp)
+
+;;; zoxide
+(rc/require 'zoxide)
+(add-hook 'dired-after-readin-hook 'zoxide-add)
 
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
