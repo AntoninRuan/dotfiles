@@ -53,6 +53,8 @@
 	  (if this-win-2nd (other-window 1))))))
 
 (global-set-key (kbd "C-t") 'toggle-window-split)
+(global-set-key (kbd "C-<tab>") 'next-window-any-frame)
+(global-set-key (kbd "C-<iso-lefttab>") 'previous-window-any-frame)
 
 ;;; ido
 (rc/require 'smex 'ido-completing-read+)
@@ -138,6 +140,10 @@
   )
 
 (global-set-key (kbd "M-;") 'xref-find-definitions)
+
+(rc/require 'ess)
+(rc/require 'polymode)
+(rc/require 'poly-R)
 
 ;;; Whitespace mode
 (defun rc/set-up-whitespace-handling ()
@@ -342,6 +348,8 @@
 
 ;;; Clang format
 (rc/require 'clang-format)
+
+(global-set-key (kbd "C-o") 'clang-format-buffer)
 
 ;;; Lsp-mode
 (rc/require 'lsp-mode
