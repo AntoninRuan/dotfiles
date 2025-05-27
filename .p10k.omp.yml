@@ -4,16 +4,16 @@ blocks:
 - type: prompt
   alignment: left
   segments:
-  - template: ╭─
+  - template: "\u256d\u2500"
     foreground: "#585858"
     type: text
     style: plain
-  - template: " {{ if .WSL }}WSL at {{ end }}\uF303 "
+  - template: " {{ if .WSL }}WSL at {{ end }}\uF303  "
     foreground: "#26C6DA"
     background: "#303030"
     type: os
     style: plain
-  - template: 
+  - template: "\ue0b1"
     foreground: "#8a8a8a"
     background: parentBackground
     type: text
@@ -31,7 +31,7 @@ blocks:
     type: path
     style: plain
   - properties:
-      branch_icon: <b> </b>
+      branch_icon: "<b>\uf126 </b>"
       fetch_status: true
       fetch_upstream_icon: true
       git_icon: "\uf1d3 "
@@ -42,7 +42,7 @@ blocks:
     background: parentBackground
     type: git
     style: plain
-  - template: 
+  - template: "\ue0b0"
     foreground: parentBackground
     background: transparent
     type: text
@@ -50,9 +50,9 @@ blocks:
   newline: true
 - type: prompt
   alignment: right
-  filler: "<#585858>-</>"
+  filler: "<#585858>\u2500</>"
   segments:
-  - template: 
+  - template: "\ue0b2"
     foreground: parentForeground
     background: transparent
     type: text
@@ -96,7 +96,7 @@ blocks:
     background: parentBackground
     type: time
     style: plain
-  - template: ─╮
+  - template: "\u2500\u256e"
     foreground: "#585858"
     background: transparent
     type: text
@@ -104,14 +104,14 @@ blocks:
 - type: prompt
   alignment: left
   segments:
-  - template: "╰─ "
+  - template: "\u2570\u2500 "
     foreground: "#585858"
     type: text
     style: plain
   newline: true
 - type: rprompt
   segments:
-  - template: ─╯
+  - template: "\u2500\u256f"
     foreground: "#585858"
     type: text
     style: plain
