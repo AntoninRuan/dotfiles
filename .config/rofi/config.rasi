@@ -1,11 +1,12 @@
 configuration {
-    modi: "drun,filebrowser,ssh";
+    modes: "drun,filebrowser,ssh";
     show-icons: true;
     display-drun: " ";
     display-run: " ";
 	display-ssh: "";
-    display-filebrowser: "";
-    display-window: "";
+    display-filebrowser: " ";
+    display-window: " ";
+    display-spotify: " ";
     drun-display-format: "{name}";
     window-format: "{w}{t}";
     font: "JetBrainsMono 15";
