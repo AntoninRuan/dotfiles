@@ -325,8 +325,6 @@
                (make "https://github.com/alemuller/tree-sitter-make")
                (elisp "https://github.com/Wilfred/tree-sitter-elisp")
                (cmake "https://github.com/uyha/tree-sitter-cmake")
-               (c "https://github.com/tree-sitter/tree-sitter-c")
-               (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
                (toml "https://github.com/tree-sitter/tree-sitter-toml")
                (tsx . ("https://github.com/tree-sitter/tree-sitter-typescript" "v0.20.3" "tsx/src"))
                (typescript . ("https://github.com/tree-sitter/tree-sitter-typescript" "v0.20.3" "typescript/src"))
