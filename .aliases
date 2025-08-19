@@ -24,7 +24,12 @@ alias which-command=whence
 alias copy="xclip -selection clipboard"
 alias mkcdir='f() { md $1; cd $1 }; f'
 
+alias sctl='systemctl'
+alias userctl='systemctl --user'
+alias uctl='userctl'
+
 alias kdiff="kitten diff"
 alias kssh="kitten ssh"
 alias gf2="/usr/bin/gf2 &> /dev/null &"
 alias qemu-monitor="telnet 127.0.0.1 7777"
+alias sudo="sudo "
