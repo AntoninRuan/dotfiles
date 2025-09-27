@@ -431,11 +431,12 @@
           python-mode
           tsx-ts-mode
           typescript-ts-mode
-          ) . lsp-deferred)
+          ))
   :custom
   (lsp-keymap-prefix "s-i")
   (lsp-keep-workspace-alive nil)
   (lsp-enable-xref t)
+  (lsp-enable-on-type-formatting nil)
   )
 
 ;;; zoxide

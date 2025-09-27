@@ -2,9 +2,12 @@
 .emacs.local|symlink|
 .emacs.rc|symlink|
 .config/kitty|symlink|
+.config/i3|symlink|
+.config/i3status|symlink|
 .config/rofi|symlink|
 .config/kanata|symlink|
 .config/kanata-tray|symlink|
+.config/scripts|symlink|
 .zshrc|symlink|
 .p10k.omp.yml|symlink|
 .zsh|symlink|
