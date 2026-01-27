@@ -30,6 +30,8 @@ alias uctl='userctl'
 
 alias kdiff="kitten diff"
 alias kssh="kitten ssh"
+alias mssh="mosh --ssh='kitten ssh'"
+alias mussh="mosh --ssh='kitten ssh -o StrictHostKeyChecking=no'"
 alias gf2="/usr/bin/gf2 &> /dev/null &"
 alias qemu-monitor="telnet 127.0.0.1 7777"
 alias sudo="sudo "
