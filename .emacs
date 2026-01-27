@@ -9,7 +9,7 @@
 
 ;;; Appearance
 
-(add-to-list 'default-frame-alist `(font . "Iosevka-16"))
+(add-to-list 'default-frame-alist `(font . "Iosevka-12"))
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)

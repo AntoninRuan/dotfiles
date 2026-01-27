@@ -1,5 +1,5 @@
 configuration {
-    modes: "drun,filebrowser,ssh";
+    modes: "drun,filebrowser,ssh,window";
     show-icons: true;
     display-drun: " ";
     display-run: " ";
