@@ -176,3 +176,11 @@
   (setq treesit-language-source-alist
         '((typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src" nil nil)
           (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src" nil nil))))
+
+;; Buffer display name
+(with-eval-after-load 'uniquify
+  (setq uniquify-buffer-name-style 'post-forward-angle-brackets))
+
+;; Config ido
+(with-eval-after-load 'ido
+  (setq ido-max-window-height 5))

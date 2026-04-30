@@ -19,7 +19,6 @@ alias ls='ls --color=tty'
 alias lsa='ls -lah'
 alias md='mkdir -p'
 alias rd=rmdir
-alias venv='source .env/bin/activate'
 alias which-command=whence
 alias copy="xclip -selection clipboard"
 alias mkcdir='f() { md $1; cd $1 }; f'
@@ -37,3 +36,25 @@ alias mussh="mosh --ssh='kitten ssh -o StrictHostKeyChecking=no'"
 alias gf2="/usr/bin/gf2 &> /dev/null &"
 alias qemu-monitor="telnet 127.0.0.1 7777"
 alias sudo="/usr/bin/sudo"
+
+function venv () {
+     VENV_DIR=""
+
+     if [ -d .env ] ; then
+          VENV_DIR=".env"
+     elif [ -d .venv ]; then
+          VENV_DIR=".venv"
+     elif [ -d env ] ; then
+          VENV_DIR="env"
+     elif [ -d venv ] ; then
+          VENV_DIR="venv"
+     fi
+
+     if [[  -z "$VENV_DIR" ]]; then
+        echo "Error: no virtual venv directory found"
+        return
+     fi
+
+     echo "Activating $VENV_DIR"
+     source "${VENV_DIR}/bin/activate"
+}
